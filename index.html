@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>West Coast Music &amp; Sound — La Jolla, CA</title>
+<meta name="description" content="Boutique DJ and sound design for live events in La Jolla and San Diego. Ambient, jazz, dub, and lofi sets for coffee shops, product launches, galas, and farmers markets.">
+
+<style>
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #f2f2f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6vh 6vw;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* subtle film-grain texture over the black background */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: rise 0.9s ease-out forwards;
+    animation-delay: 0.15s;
+  }
+
+  @keyframes rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo {
+    width: min(90vw, 460px);
+    height: auto;
+    display: block;
+    margin: 0 auto 2.5rem;
+  }
+
+  .tagline {
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    letter-spacing: 0.04em;
+    color: #d8d6d0;
+    margin: 0 0 1.1rem;
+    font-weight: 400;
+  }
+
+  .genres {
+    font-size: 0.8rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #8f8c85;
+    margin: 0 0 2.6rem;
+  }
+
+  .venues {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #b7b4ac;
+    max-width: 460px;
+    margin: 0 auto 2.8rem;
+  }
+
+  .venues strong {
+    color: #f2f2f0;
+    font-weight: 600;
+  }
+
+  .contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2.1rem;
+    border: 1px solid #4a4844;
+    border-radius: 999px;
+    color: #f2f2f0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+  }
+
+  .contact:hover,
+  .contact:focus-visible {
+    border-color: #f2f2f0;
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .location {
+    margin-top: 2.2rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #6b6862;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <picture>
+    <source srcset="logo.webp" type="image/webp">
+    <img class="logo" src="logo.png" alt="West Coast Music &amp; Sound — San Diego, USA">
+  </picture>
+
+  <p class="tagline">Boutique DJ &amp; sound design for live events</p>
+  <p class="genres">Ambient &nbsp;·&nbsp; Jazz &nbsp;·&nbsp; Dub &nbsp;·&nbsp; Lofi</p>
+
+  <p class="venues">
+    Curated, polished sound for spaces that call for atmosphere over volume —
+    <strong>coffee shops, product openings, gala parties, and farmers markets.</strong>
+  </p>
+
+  <a class="contact" href="mailto:westcoastmusicandsound@gmail.com">
+    westcoastmusicandsound@gmail.com
+  </a>
+
+  <p class="location">La Jolla, California</p>
+</div>
+
+</body>
+</html>
